@@ -17,7 +17,7 @@ import { defineComponent,ref,onMounted } from 'vue';
 import type { PropType } from 'vue';
 import axios from 'axios';
 import type { Todo } from '@/components/interfaces/Todo';
-import TodoForm from '@/components/icons/TodoForm.vue';
+import TodoForm from '@/components/TodoForm.vue';
 import TodoList from '@/components/TodoList.vue';
 
 

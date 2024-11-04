@@ -14,7 +14,7 @@
 
 import { defineComponent } from 'vue';
 import type { PropType } from 'vue';
-import type { Todo } from '../interfaces/Todo';
+import type { Todo } from './interfaces/Todo';
 
 
 export default defineComponent({
