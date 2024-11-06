@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Gerenciado de tarefas</h1>
+        <h1>Gerenciador de tarefas</h1>
         <TodoForm
         :todo="currentTodo"
         :isEditing="isEditing"
@@ -25,6 +25,7 @@ export default defineComponent({
 
     components:{TodoForm,TodoList},
     setup(){
+        //ref()pega o argumento e retorna-o envolvido dentro de um objeto ref com um .valuepropriedade:
         const todos = ref<Todo[]>([]);
         const currentTodo = ref<Todo>({id: "0", text:''});
         const isEditing = ref(false);
@@ -40,7 +41,6 @@ export default defineComponent({
         }
         const createTodo = async () => {
     try {
-        // Não envie um id, pois o JSON Server irá gerar um automaticamente
         const response = await axios.post<Todo>("http://localhost:3000/todos", {
             text: currentTodo.value.text,
         });
